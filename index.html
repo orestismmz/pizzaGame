@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="make-the-pizza/css/main.css" />
+    <title>Make the pizza</title>
+  </head>
+  <body>
+    <section id="screen">
+      <div id="game" class="offDisplay">
+        <div id="background"></div>
+
+        <div id="foreground">
+          <div id="chef_angry" class="hidden"></div>
+          <div id="chef_happy"></div>
+          <div id="pizza"></div>
+          <div id="noLife1"></div>
+          <div id="noLife2"></div>
+          <div id="noLife3"></div>
+          <div id="life1"></div>
+          <div id="life2"></div>
+          <div id="life3"></div>
+          <div id="clock"></div>
+          <div id="cursor_container">
+            <div id="cursor"></div>
+          </div>
+          <div id="score_box">Score:<span id="score_number">0</span></div>
+          <div id="toggleSFX" class="toggleSoundOff"></div>
+        </div>
+
+        <div id="objects">
+          <div id="tomato_container">
+            <div id="tomato"></div>
+          </div>
+          <div id="cheese_container">
+            <div id="cheese"></div>
+          </div>
+          <div id="basil_container">
+            <div id="basil"></div>
+          </div>
+          <div id="mushroom_container">
+            <div id="mushroom"></div>
+          </div>
+          <div id="ham_container">
+            <div id="ham"></div>
+          </div>
+
+          <div id="pineapple_container">
+            <div id="pineapple"></div>
+          </div>
+          <div id="banana_container">
+            <div id="banana"></div>
+          </div>
+          <div id="lemon_container">
+            <div id="lemon"></div>
+          </div>
+          <div id="apple_container">
+            <div id="apple"></div>
+          </div>
+          <div id="carrot_container">
+            <div id="carrot"></div>
+          </div>
+        </div>
+      </div>
+      <div id="welcome_screen" class="hidden">
+        <div id="play_button_welcome_screen"></div>
+        <div id="instructions_button_welcome_screen"></div>
+      </div>
+
+      <div id="instructions_screen" class="hidden">
+        <p>
+          Click on the right ingredients <br />
+          and make the pizza! <br />
+          1 right ingredient = 1 point <br />
+          Score 30 points in 1 minute <br />
+          to win the game!
+        </p>
+        <div id="return_button"></div>
+      </div>
+
+      <div id="win_screen" class="hidden">
+        <div id="play_button_win_screen"></div>
+        <div id="instructions_button_win_screen"></div>
+      </div>
+
+      <div id="game_over_screen" class="hidden">
+        <div id="play_button_game_over"></div>
+        <div id="instructions_button_game_over"></div>
+      </div>
+
+      <audio id="goodObjectSFX" src="/make-the-pizza/sound/goodObjectSFX.mp3"></audio>
+      <audio id="badObjectSFX" src="/make-the-pizza/sound/badObjectSFX.mp3"></audio>
+      <audio id="gameWinSFX" src="/make-the-pizza/sound/gameWinSFX.mp3"></audio>
+    </section>
+
+    <script src="/make-the-pizza/js/pizza_game.js"></script>
+  </body>
+</html>

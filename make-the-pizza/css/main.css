@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+body {
+  margin: 0;
+}
+#screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+#game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../graphics/background.svg");
+  background-size: cover;
+}
+
+#foreground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#pizza {
+  position: absolute;
+  background-image: url("../graphics/pizza.svg");
+  background-size: cover;
+  aspect-ratio: 3.44/1;
+  top: 74.3%;
+  left: 9%;
+  width: 50%;
+}
+
+#chef_happy {
+  position: absolute;
+  background-image: url("../graphics/chefHappy.svg");
+  background-size: cover;
+  aspect-ratio: 1.2/2;
+  width: 29.5%;
+  top: 12.6%;
+  right: 5%;
+}
+
+#chef_angry {
+  position: absolute;
+  background-image: url("../graphics/chefAngry.svg");
+  background-size: cover;
+  aspect-ratio: 1.2/2;
+  width: 29.5%;
+  top: 12.6%;
+  right: 5%;
+}
+
+.pissedOff {
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-7%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(7%);
+  }
+}
+
+.excited {
+  animation: nod 1s 1 ease-out;
+}
+
+@keyframes nod {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(3%);
+  }
+}
+
+#life1 {
+  position: absolute;
+  background-image: url("../graphics/life.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 5%;
+  top: 1%;
+  right: 11%;
+}
+
+#life2 {
+  position: absolute;
+  background-image: url("../graphics/life.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 5%;
+  top: 1%;
+  right: 16.5%;
+}
+#life3 {
+  position: absolute;
+  background-image: url("../graphics/life.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 5%;
+  top: 1%;
+  right: 22%;
+}
+#noLife1 {
+  position: absolute;
+  background-image: url("../graphics/noLife.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 5%;
+  top: 1%;
+  right: 11%;
+}
+
+#noLife2 {
+  position: absolute;
+  background-image: url("../graphics/noLife.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 5%;
+  top: 1%;
+  right: 16.5%;
+}
+
+#noLife3 {
+  position: absolute;
+  background-image: url("../graphics/noLife.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 5%;
+  top: 1%;
+  right: 22%;
+}
+
+#clock {
+  position: absolute;
+  background-image: url("../graphics/clockNoCursor.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 8.5%;
+  top: 1%;
+  right: 1%;
+}
+#cursor_container {
+  position: absolute;
+  width: 1%;
+  aspect-ratio: 0.225/1;
+  top: 4.5%;
+  right: 4.75%;
+}
+
+#cursor {
+  background-image: url("../graphics/cursor.svg");
+  background-size: cover;
+  aspect-ratio: 0.225/1;
+  width: 100%;
+  height: 100%;
+}
+.cursor_rotation {
+  animation-name: rotate;
+  animation-duration: 60s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+#tomato,
+#cheese,
+#basil,
+#mushroom,
+#ham,
+#pineapple,
+#banana,
+#lemon,
+#apple,
+#carrot {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#tomato_container {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 2.03/1;
+}
+
+#tomato {
+  background-image: url("../graphics/tomato.svg");
+}
+#cheese_container {
+  position: absolute;
+  width: 8%;
+  aspect-ratio: 1.2/1;
+}
+
+#cheese {
+  background-image: url("../graphics/cheese.svg");
+}
+#basil_container {
+  position: absolute;
+  width: 6%;
+  aspect-ratio: 1/1;
+}
+
+#basil {
+  background-image: url("../graphics/basil.svg");
+}
+
+#mushroom_container {
+  position: absolute;
+  width: 6%;
+  aspect-ratio: 1/1;
+}
+
+#mushroom {
+  background-image: url("../graphics/mushroom.svg");
+}
+
+#ham_container {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 1.333333333/1;
+}
+
+#ham {
+  background-image: url("../graphics/ham.svg");
+}
+
+#pineapple_container {
+  position: absolute;
+  width: 8%;
+  aspect-ratio: 1.477/1;
+}
+
+#pineapple {
+  background-image: url("../graphics/pineapple.svg");
+}
+
+#banana_container {
+  position: absolute;
+  width: 8%;
+  aspect-ratio: 1/1;
+}
+
+#banana {
+  background-image: url("../graphics/banana.svg");
+}
+
+#lemon_container {
+  position: absolute;
+  width: 4.7%;
+  aspect-ratio: 0.5/1;
+}
+
+#lemon {
+  background-image: url("../graphics/lemon.svg");
+}
+
+#apple_container {
+  position: absolute;
+  width: 6%;
+  aspect-ratio: 1/1;
+}
+
+#apple {
+  background-image: url("../graphics/apple.svg");
+}
+
+#carrot_container {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 0.4/1;
+}
+
+#carrot {
+  background-image: url("../graphics/carrot.svg");
+}
+
+#score_box {
+  position: absolute;
+  top: 1%;
+  right: 89%;
+  width: 10%;
+  font-size: 3.5vw;
+  color: #81503b;
+  font-family: "Kaushan Script", cursive;
+}
+
+#play_button:active,
+#pause_button:active,
+.soundOff:active,
+.soundOn:active,
+#play_button_welcome_screen:active,
+#play_button_win_screen:active,
+#play_button_game_over:active,
+#instructions_button_welcome_screen:active,
+#instructions_button_win_screen:active,
+#instructions_button_game_over:active,
+#return_button:active {
+  cursor: pointer;
+  transform: translate(2px, 3px);
+}
+
+.toggleSoundOff {
+  position: absolute;
+  background-image: url("../graphics/soundOff.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 4%;
+  top: 13%;
+  right: 95%;
+  pointer-events: all;
+}
+.toggleSoundOn {
+  position: absolute;
+  background-image: url("../graphics/soundOn.svg");
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 4%;
+  top: 13%;
+  right: 95%;
+  pointer-events: all;
+}
+
+#welcome_screen,
+#instructions_screen,
+#win_screen,
+#game_over_screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  pointer-events: none;
+  background-repeat: repeat;
+}
+
+#welcome_screen {
+  background-image: url("../graphics/welcomeScreen.svg");
+}
+
+#instructions_screen {
+  background-image: url("../graphics/instructionsScreen.svg");
+}
+#instructions_screen > p {
+  display: grid;
+  margin-top: 20%;
+  margin-left: 16%;
+  font-family: "Kaushan Script", cursive;
+  color: #42210b;
+  font-size: 2.8vw;
+  line-height: 3.5vw;
+  letter-spacing: 0.1vw;
+}
+
+#win_screen {
+  background-image: url("../graphics/winScreen.svg");
+}
+
+#game_over_screen {
+  background-image: url("../graphics/gameOverScreen.svg");
+}
+
+#play_button_welcome_screen {
+  background-image: url("../graphics/play.svg");
+  position: absolute;
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 12%;
+  top: 38%;
+  right: 60%;
+  pointer-events: all;
+}
+
+#play_button_win_screen,
+#play_button_game_over {
+  background-image: url("../graphics/play.svg");
+  position: absolute;
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 11%;
+  top: 54%;
+  right: 61.5%;
+  pointer-events: all;
+}
+
+#instructions_button_welcome_screen {
+  background-image: url("../graphics/instructions.svg");
+  position: absolute;
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 9%;
+  top: 65%;
+  right: 61.5%;
+  pointer-events: all;
+}
+
+#instructions_button_win_screen,
+#instructions_button_game_over {
+  background-image: url("../graphics/instructions.svg");
+  position: absolute;
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 8%;
+  top: 77%;
+  right: 63%;
+  pointer-events: all;
+}
+
+#return_button {
+  background-image: url("../graphics/returnButton.svg");
+  position: absolute;
+  background-size: cover;
+  aspect-ratio: 1/1;
+  width: 6%;
+  top: 75%;
+  right: 63.5%;
+  pointer-events: all;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.offDisplay {
+  display: none;
+}
+
+.falling1 {
+  animation: falling 4s infinite linear;
+  /* written otherwise
+    animation-name: falling;
+    animation-duration:  3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  */
+}
+.falling2 {
+  animation: falling 5s infinite linear;
+  animation-delay: 1s;
+}
+.falling3 {
+  animation: falling 4s infinite linear;
+  animation-delay: 2s;
+}
+.falling4 {
+  animation: falling 5s infinite linear;
+  animation-delay: 3s;
+}
+.falling5 {
+  animation: falling 6s infinite linear;
+  animation-delay: 4s;
+}
+
+@keyframes falling {
+  to {
+    transform: translateY(1500%);
+  }
+}
+
+.vanish {
+  animation-name: vanish;
+  animation-duration: 0.2s;
+}
+@keyframes vanish {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.stop {
+  animation-play-state: paused;
+}
+
+.pos1 {
+  right: 40%;
+  top: -50%;
+}
+.pos2 {
+  right: 50%;
+  top: -50%;
+}
+.pos3 {
+  right: 60%;
+  top: -50%;
+}
+.pos4 {
+  right: 70%;
+  top: -50%;
+}
+.pos5 {
+  right: 80%;
+  top: -50%;
+}
+.pos6 {
+  right: 83%;
+  top: -50%;
+}
